@@ -8,6 +8,10 @@ import Welcome from './pages/Welcome/Welcome';
 import './components/styles/App.scss'
 import AppFrame from "./components/AppFrame/AppFrame";
 import NumberCard from "./components/CuadroResumen/CuadroResumen";
+import './components/styles/App.scss'
+
+import CuadroResumen from "./components/CuadroResumen/CuadroResumen";
+import Twitter from "./pages/Twitter/Twitter";
 
 function App() {
   return (
@@ -16,6 +20,7 @@ function App() {
         <Route exact path="/" component={AppFrame}/>
         <Route exact path="/welcome" component={Welcome}/>
         <Route exact path="/" component={NumberCard}/>
+        <Route exact path="/" component={Twitter}/>
       </switch>
     </BrowserRouter>
   );
