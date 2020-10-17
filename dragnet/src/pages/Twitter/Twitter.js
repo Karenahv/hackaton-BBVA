@@ -6,6 +6,8 @@ import LineChart from "../../components/LineChart/LineChart";
 import LineGraph from "../../components/LineChart/LineChart";
 import { AiFillHeart, AiFillWechat, AiFillInteraction, AiFillFund } from "react-icons/ai";
 
+import WorldMap from "../../components/MapChart/WorldMap";
+import MapChart from "../../components/MapChart/MapChart";
 
 
 const Twitter = (props) => {
@@ -27,11 +29,15 @@ const Twitter = (props) => {
             </Row>
             <Row>
                 <Col lg={18} md={24} xs={24}>
+                    <h2>Índice de aprobación</h2>
                     <LineGraph></LineGraph>
                 </Col>
                  <Col lg={6} md={24} xs={24}>
 
                 </Col>
+            </Row>
+            <Row>
+                <MapChart></MapChart>
             </Row>
 
         </AppFrame>
