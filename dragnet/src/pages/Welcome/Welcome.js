@@ -1,4 +1,5 @@
 import React, {Component, Fragment} from "react";
+import WelcomeSection from '../../components/AppFrame/WelcomeSection/WelcomeSection';
 
 
 const Welcome = () => {
@@ -8,3 +9,5 @@ const Welcome = () => {
        </Fragment>
    )  
 }
+
+export default Welcome;
