@@ -6,9 +6,8 @@ import './CuadroResumen.scss'
 import AppFrame from "../AppFrame/AppFrame";
 
 
-function NumberCard({icon, color, title, number, countUp}) {
+function CuadroResumen({icon, color, title, number, countUp}) {
     return (
-        <AppFrame>
             <Card
                 className='numberCard'
                 bordered={false}
@@ -20,23 +19,14 @@ function NumberCard({icon, color, title, number, countUp}) {
                 <div className='content'>
                     <p className='title'>{title || 'No Title'}</p>
                     <p className='number'>
-                        <CountUp
-                            start={0}
-                            end={number}
-                            duration={2.75}
-                            useEasing
-                            useGrouping
-                            separator=","
-                            {...(countUp || {})}
-                        />
+                        20
                     </p>
                 </div>
             </Card>
-        </AppFrame>
     )
 }
 
-NumberCard.propTypes = {
+CuadroResumen.propTypes = {
     icon: PropTypes.string,
     color: PropTypes.string,
     title: PropTypes.string,
@@ -44,4 +34,4 @@ NumberCard.propTypes = {
     countUp: PropTypes.object,
 }
 
-export default NumberCard
+export default CuadroResumen

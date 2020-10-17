@@ -2,18 +2,17 @@ import React, {useState} from "react";
 import {Layout, Menu, Breadcrumb} from 'antd';
 import LogoSidebar from "../LogoSider/LogoSider";
 import icono_dragnet from "../../assets/images/logo-dragnet.png";
-import icono_bbva from "../../assets/images/logo-bbva.jpeg";
+import icono_bbva from "../../assets/images/Logo-BBVA (1).png";
 import {Link} from 'react-router-dom';
 import {
-    UserOutlined,
-    ScheduleOutlined,
-    ShopOutlined,
-    ImportOutlined,
+    TwitterOutlined,
+    YoutubeOutlined,
+    RedditOutlined,
 } from '@ant-design/icons';
 
 const {Header, Content, Footer, Sider} = Layout;
 
-const AppFrame = ({children})  => {
+const AppFrame = ({children}) => {
 
     const [collapsed, setCollapsed] = useState(true)
 
@@ -25,13 +24,27 @@ const AppFrame = ({children})  => {
             <Sider collapsible collapsed={collapsed} onCollapse={onCollapse}>
                 <div className="logo"/>
                 <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline">
-                    <Menu.Item key="2" icon={<UserOutlined/>}>
-                        Login
+                    <Menu.Item key="1" icon={<Link to={'/'}><LogoSidebar logo={icono_bbva}/></Link>}>
+                        Home
+                    </Menu.Item>
+                    <Menu.Item key="2" icon={<TwitterOutlined/>}>
+                        Twitter
+                    </Menu.Item>
+                    <Menu.Item key="2" icon={<YoutubeOutlined/>}>
+                        Youtube
+                    </Menu.Item>
+                    <Menu.Item key="2" icon={<RedditOutlined/>}>
+                        Reddit
                     </Menu.Item>
                 </Menu>
             </Sider>
             <Layout className="site-layout">
-                <Header className="site-layout-background" style={{padding: 0}}/>
+                <Header className="site-layout-background" style={{padding: 0}}>
+                    <div className='top-bar' style={{color:'white'}}>
+                        <h3 style={{color:'white'}}>Social Listening</h3>
+                    </div>
+                </Header>
+
                 <Content style={{margin: '0 16px'}}>
                     <Breadcrumb style={{margin: '16px 0'}}>
                     </Breadcrumb>
