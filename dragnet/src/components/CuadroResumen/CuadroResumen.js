@@ -4,6 +4,8 @@ import {Card} from 'antd'
 import CountUp from 'react-countup'
 import './CuadroResumen.scss'
 import AppFrame from "../AppFrame/AppFrame";
+import { AiFillHeart } from "react-icons/ai";
+import {IconContext} from 'react-icons'
 
 
 function CuadroResumen({icon, color, title, number, countUp}) {
@@ -14,7 +16,9 @@ function CuadroResumen({icon, color, title, number, countUp}) {
                 bodyStyle={{padding: 10}}
             >
       <span className='iconWarp' style={{color}}>
-
+        <IconContext.Provider value={{className:"iconCards"}}>
+            {icon}
+        </IconContext.Provider>
       </span>
                 <div className='content'>
                     <p className='title'>{title || 'No Title'}</p>

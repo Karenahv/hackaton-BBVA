@@ -2,6 +2,7 @@ import React from 'react';
 import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 import MapWorld from './WorldMap'
+import { Row } from 'antd';
 
 // Load Highcharts modules
 require('highcharts/modules/map')(Highcharts);
@@ -84,14 +85,17 @@ const mapOptions = {
 const MapChart = () =>  {
     return (
       <div>
-        <h1>Demos</h1>
-
-        <h2>Highmaps</h2>
-        <HighchartsReact
-          options={mapOptions}
-          constructorType={'mapChart'}
-          highcharts={Highcharts}
-        />
+        <Row>
+          <h2>Twitts por país</h2>
+        </Row>
+        <Row>
+          <HighchartsReact
+            options={mapOptions}
+            constructorType={'mapChart'}
+            highcharts={Highcharts}
+          />
+        </Row>
+        
       </div>
     );
 }

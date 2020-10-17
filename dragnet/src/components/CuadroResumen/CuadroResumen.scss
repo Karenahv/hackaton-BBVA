@@ -9,6 +9,10 @@
     float: left;
   }
 
+  .iconCards {
+    color: #ff414d;
+  }
+
   .content {
     width: 100%;
     padding-left: 78px;
@@ -18,6 +22,7 @@
       font-size: 16px;
       margin-bottom: 8px;
       height: 16px;
+      font-weight: bold;
     }
 
     .number {

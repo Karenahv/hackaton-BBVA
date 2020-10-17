@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {Layout, Menu, Breadcrumb} from 'antd';
+import {Layout, Menu, Breadcrumb, Row, Col} from 'antd';
 import LogoSidebar from "../LogoSider/LogoSider";
 import icono_dragnet from "../../assets/images/logo-dragnet.png";
 import icono_bbva from "../../assets/images/Logo-BBVA (1).png";
@@ -9,6 +9,8 @@ import {
     YoutubeOutlined,
     RedditOutlined,
 } from '@ant-design/icons';
+import './AppFrame.scss';
+import logoDragnet from "../../assets/Artboard-oscuro.png"
 
 const {Header, Content, Footer, Sider} = Layout;
 
@@ -40,9 +42,11 @@ const AppFrame = ({children}) => {
             </Sider>
             <Layout className="site-layout">
                 <Header className="site-layout-background" style={{padding: 0}}>
-                    <div className='top-bar' style={{color:'white'}}>
-                        <h3 style={{color:'white'}}>Social Listening</h3>
-                    </div>
+                    <Row className='top-bar' style={{color:'white'}}>
+                        <Col>
+                            <h3 style={{color:'white'}}>Social Listening</h3>
+                        </Col>
+                    </Row>
                 </Header>
 
                 <Content style={{margin: '0 16px'}}>
@@ -52,7 +56,9 @@ const AppFrame = ({children}) => {
                         {children}
                     </div>
                 </Content>
-                <Footer style={{textAlign: 'center'}}>GROVITY</Footer>
+                <Footer style={{textAlign: 'center'}}>
+                    Powered by <img className="logo-dragnet" src={logoDragnet}/>                
+                </Footer>
             </Layout>
         </Layout>
     )

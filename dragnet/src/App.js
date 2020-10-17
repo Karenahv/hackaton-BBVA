@@ -17,9 +17,9 @@ function App() {
   return (
     <BrowserRouter>
       <switch>
-        <Route exact path="/" component={AppFrame}/>
+        {/* <Route exact path="/" component={AppFrame}/> */}
         <Route exact path="/welcome" component={Welcome}/>
-        <Route exact path="/" component={NumberCard}/>
+        {/* <Route exact path="/" component={NumberCard}/> */}
         <Route exact path="/" component={Twitter}/>
       </switch>
     </BrowserRouter>

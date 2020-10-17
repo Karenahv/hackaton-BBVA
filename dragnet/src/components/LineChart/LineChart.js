@@ -31,8 +31,8 @@ const LineGraph = (props) => {
 
     return (
       <LineChart
-        width={1300}
-        height={350}
+        width={900}
+        height={450}
         data={data}
         margin={{
           top: 5, right: 30, left: 20, bottom: 5,
