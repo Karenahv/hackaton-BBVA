@@ -4,6 +4,8 @@ import {Row, Col, Button} from 'antd';
 import CuadroResumen from "../../components/CuadroResumen/CuadroResumen";
 import LineChart from "../../components/LineChart/LineChart";
 import LineGraph from "../../components/LineChart/LineChart";
+import { AiFillHeart, AiFillWechat, AiFillInteraction, AiFillFund } from "react-icons/ai";
+
 
 
 const Twitter = (props) => {
@@ -11,16 +13,16 @@ const Twitter = (props) => {
         <AppFrame>
             <Row gutter={{xs: 8, sm: 16, md: 24, lg: 32}}>
                 <Col lg={6} md={24} xs={24}>
-                    <CuadroResumen title='Twitts analizados'></CuadroResumen>
+                    <CuadroResumen title='Twitts analizados' icon={<AiFillWechat/>}></CuadroResumen>
                 </Col>
                 <Col lg={6} md={24} xs={24}>
-                    <CuadroResumen title='Likes'></CuadroResumen>
+                    <CuadroResumen title='Likes' icon={<AiFillHeart/>}></CuadroResumen>
                 </Col>
                 <Col lg={6} md={24} xs={24}>
-                    <CuadroResumen title='Retwitt'></CuadroResumen>
+                    <CuadroResumen title='Retwitt' icon={<AiFillInteraction/>}></CuadroResumen>
                 </Col>
                 <Col lg={6} md={24} xs={24}>
-                    <CuadroResumen title='Promedio índice de aprobación'></CuadroResumen>
+                    <CuadroResumen title='Promedio índice de aprobación' icon={<AiFillFund/>}></CuadroResumen>
                 </Col>
             </Row>
             <Row>
