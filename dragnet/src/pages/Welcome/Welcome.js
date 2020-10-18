@@ -1,5 +1,5 @@
 import React, {Component, Fragment} from "react";
-import WelcomeSection from '../../components/AppFrame/WelcomeSection/WelcomeSection';
+import WelcomeSection from '../../components/WelcomeSection/WelcomeSection';
 
 
 const Welcome = () => {
