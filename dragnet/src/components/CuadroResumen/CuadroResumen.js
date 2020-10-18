@@ -5,7 +5,7 @@ import './CuadroResumen.scss'
 import {IconContext} from 'react-icons'
 
 
-function CuadroResumen({icon, color, title}) {
+function CuadroResumen({dato, title, icon, color}) {
     return (
             <Card
                 className='numberCard'
@@ -20,7 +20,7 @@ function CuadroResumen({icon, color, title}) {
                 <div className='content'>
                     <p className='title'>{title || 'No Title'}</p>
                     <p className='number'>
-                        20
+                        {dato}
                     </p>
                 </div>
             </Card>
@@ -28,11 +28,8 @@ function CuadroResumen({icon, color, title}) {
 }
 
 CuadroResumen.propTypes = {
-    icon: PropTypes.string,
-    color: PropTypes.string,
     title: PropTypes.string,
-    number: PropTypes.number,
-    countUp: PropTypes.object,
+    dato: PropTypes.number,
 }
 
 export default CuadroResumen

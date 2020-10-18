@@ -6,7 +6,7 @@ import './TwittCards.scss'
 const { Meta } = Card;
 
 
-function TwittCard(props) {
+function TwittCard({bestTweet, author, full_text}) {
     return (
             <Card
               bordered={false}
@@ -15,8 +15,8 @@ function TwittCard(props) {
             >
               <Meta
                 avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
-                title="User Name"
-                description="This is the description"
+                title={author}
+                description={full_text}
               />
             </Card>
     )
