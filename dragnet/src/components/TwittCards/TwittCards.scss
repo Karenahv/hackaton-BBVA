@@ -1,7 +1,8 @@
-.numberCard {
+.numberCardTweet {
     padding: 32px;
     margin-bottom: 24px;
     cursor: pointer;
+  border-left: 7px solid #2dcccd;
   
     .iconWarp {
       font-size: 54px;
@@ -9,7 +10,7 @@
     }
   
     .iconCards {
-      color: #ff414d;
+      color: #5bbeff;
     }
   
     .content {

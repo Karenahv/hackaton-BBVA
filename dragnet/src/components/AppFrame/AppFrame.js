@@ -1,13 +1,11 @@
 import React, {useState} from "react";
 import {Layout, Menu, Breadcrumb, Row, Col} from 'antd';
 import LogoSidebar from "../LogoSider/LogoSider";
-import icono_dragnet from "../../assets/images/logo-dragnet.png";
 import icono_bbva from "../../assets/images/Logo-BBVA (1).png";
 import {Link} from 'react-router-dom';
 import {
     TwitterOutlined,
     YoutubeOutlined,
-    RedditOutlined,
 } from '@ant-design/icons';
 import './AppFrame.scss';
 import logoDragnet from "../../assets/Artboard-oscuro.png"
@@ -31,13 +29,15 @@ const AppFrame = ({children}) => {
                     </Menu.Item>
                     <Menu.Item key="2" icon={<TwitterOutlined/>}>
                         Twitter
+                        <Link to="/twitter"/>
                     </Menu.Item>
                     <Menu.Item key="2" icon={<YoutubeOutlined/>}>
                         Youtube
+                        <Link to="/youtube"/>
                     </Menu.Item>
-                    <Menu.Item key="2" icon={<RedditOutlined/>}>
-                        Reddit
-                    </Menu.Item>
+                    {/*<Menu.Item key="2" icon={<RedditOutlined/>}>*/}
+                    {/*    Reddit*/}
+                    {/*</Menu.Item>*/}
                 </Menu>
             </Sider>
             <Layout className="site-layout">
@@ -57,7 +57,7 @@ const AppFrame = ({children}) => {
                     </div>
                 </Content>
                 <Footer style={{textAlign: 'center'}}>
-                    Powered by <img className="logo-dragnet" src={logoDragnet}/>                
+                    Powered by <img alt='dragnet' className="logo-dragnet" src={logoDragnet}/>
                 </Footer>
             </Layout>
         </Layout>

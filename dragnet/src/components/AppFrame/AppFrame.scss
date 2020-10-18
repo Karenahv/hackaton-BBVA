@@ -6,6 +6,7 @@
   //   //background-color: $primary !important
   // }
 
+
   .top-bar {
     display: flex;
     justify-content: center;
@@ -18,7 +19,7 @@
   }
 
   .ant-layout-header {
-    background-color: #132743;
+    background-color: #072146;
 
     .top-bar {
       text-align: center;
@@ -27,5 +28,9 @@
 
   .logo-dragnet {
     width: 70px;
+  }
+
+  .ant-menu-item-selected {
+    background-color: transparent !important;
   }
 }

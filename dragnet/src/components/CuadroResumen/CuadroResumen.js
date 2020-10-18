@@ -1,14 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import {Card} from 'antd'
-import CountUp from 'react-countup'
 import './CuadroResumen.scss'
-import AppFrame from "../AppFrame/AppFrame";
-import { AiFillHeart } from "react-icons/ai";
 import {IconContext} from 'react-icons'
 
 
-function CuadroResumen({icon, color, title, number, countUp}) {
+function CuadroResumen({icon, color, title}) {
     return (
             <Card
                 className='numberCard'

@@ -1,21 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import {Card, Avatar} from 'antd'
-import CountUp from 'react-countup'
 import './TwittCards.scss'
-import AppFrame from "../AppFrame/AppFrame";
-import { AiFillHeart } from "react-icons/ai";
-import { EditOutlined, EllipsisOutlined, SettingOutlined } from '@ant-design/icons';
 
 const { Meta } = Card;
 
 
-function TwittCard({icon, color, title, number, descripcion}) {
+function TwittCard(props) {
     return (
             <Card
               bordered={false}
                 bodyStyle={{padding: 10}}
-              className='numberCard'
+              className='numberCardTweet'
             >
               <Meta
                 avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}

@@ -70,7 +70,7 @@ const mapOptions = {
   },
   colorAxis: {
     min: 0,
-    stops: [[0.4, '#ffff00'], [0.65, '#bfff00'], [1, '	#40ff00']]
+    stops: [[0.4, '#5bbeff'], [0.65, '#072146'], [1, '	#072146']]
   },
 
   series: [
@@ -82,11 +82,11 @@ const mapOptions = {
   ]
 };
 
-const MapChart = () =>  {
+const MapChart = (props) =>  {
     return (
       <div>
         <Row>
-          <h2>Twitts por país</h2>
+          <h2>{props.title}</h2>
         </Row>
         <Row>
           <HighchartsReact
