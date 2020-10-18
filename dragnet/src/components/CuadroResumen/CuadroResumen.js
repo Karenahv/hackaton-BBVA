@@ -5,6 +5,7 @@ import './CuadroResumen.scss'
 import {IconContext} from 'react-icons'
 
 
+
 function CuadroResumen({dato, title, icon, color}) {
     return (
             <Card

@@ -3,6 +3,7 @@ import {
     LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
 } from 'recharts';
 import './LineChart.scss'
+import {URL_BASE} from "../../api";
 
 // const data = [
 //     {
@@ -27,7 +28,7 @@ import './LineChart.scss'
 //         name: 'Domingo', IA: 3490,
 //     },
 // ];
-const URL_BASE = 'https://d811e445999a.ngrok.io'
+
 const LineGraph = (props) => {
 
     const [data1, setData1] = useState(null)

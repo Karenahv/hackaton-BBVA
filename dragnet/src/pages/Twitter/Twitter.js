@@ -13,9 +13,9 @@ import moment from 'moment';
 import 'moment/locale/es';
 import {Spin} from "antd";
 import BarChart1 from "../../components/BarChart/BarChart";
+import {URL_BASE} from "../../api";
 
 
-const URL_BASE = 'https://d811e445999a.ngrok.io'
 const Twitter = (props) => {
 
     const [bestTweet, setBestTweet] = useState(null)

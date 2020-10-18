@@ -50,11 +50,12 @@ const TagCloudComp = (props) => {
         for (let i = 1; i < words.length; i++) {
             data2.push( {
                 name: words[i].word,
+                IA: words[i].score
             })
 
         }
     }
-
+    console.log(data2)
     return (
       <div className="app-outer">
         <div className="app-inner">
@@ -86,44 +87,44 @@ const TagCloudComp = (props) => {
             </div>
             <CloudItem text="Custom item, Hover me!" />
             <CloudItem text="Custom item 2, Hover me!" />
-            <div style={styles.large}>Transformers</div>
-            <div style={styles.large}>Simpsons</div>
-            <div style={styles.large}>Dragon Ball</div>
-            <div style={styles.large}>Rick & Morty</div>
-            <div style={{ fontFamily: "courier" }}>He man</div>
-            <div style={{ fontSize: 30 }}>World trigger</div>
-            <div style={{ fontStyle: "italic" }}>Avengers</div>
-            <div style={{ fontWeight: 200 }}>Family Guy</div>
-            <div style={{ color: "green" }}>American Dad</div>
+              {/*{*/}
+              {/*    Array.isArray(primero) && (*/}
+              {/*        primero.map(key =>*/}
+              {/*            <div style={styles.large}>*/}
+              {/*                {primero.name}*/}
+              {/*            </div>*/}
+              {/*        )*/}
+              {/*    )*/}
+              {/*}*/}
+            <div style={styles.large}>Caso</div>
+            <div style={styles.large}>Respuesta</div>
+            <div style={styles.large}>email</div>
+            <div style={{ fontFamily: "courier" }}>empresa</div>
+            <div style={{ fontSize: 30 }}>PandoraThalassa BBVA</div>
+            <div style={{ fontStyle: "italic" }}>Siniestro</div>
+            <div style={{ fontWeight: 200 }}>Disfrazado</div>
+            <div style={{ color: "green" }}>BBVA_colombia</div>
+            <div style={{ color: "green" }}>BBVA</div>
+            <div style={{ color: "green" }}>gol</div>
+            <div style={{ color: "green" }}>disfrazado</div>
+            <div style={{ color: "green" }}>amaño</div>
             <div className="tag-item-wrapper">
               <div>Hover Me Please!</div>
               <div className="tag-item-tooltip">HOVERED!</div>
             </div>
-            <div>Gobots</div>
-            <div>Thundercats</div>
-            <div>M.A.S.K.</div>
-            <div>GI Joe</div>
-            <div>Inspector Gadget</div>
-            <div>Bugs Bunny</div>
-            <div>Tom & Jerry</div>
-            <div>Cowboy Bebop</div>
-            <div>Evangelion</div>
-            <div>Bleach</div>
-            <div>GITS</div>
-            <div>Pokemon</div>
-            <div>She Ra</div>
-            <div>Fullmetal Alchemist</div>
-            <div>Gundam</div>
-            <div>Uni Taisen</div>
-            <div>Pinky and the Brain</div>
-            <div>Bobs Burgers</div>
-            <div style={styles.small}>Dino Riders</div>
-            <div style={styles.small}>Silverhawks</div>
-            <div style={styles.small}>Bravestar</div>
-            <div style={styles.small}>Starcom</div>
-            <div style={styles.small}>Cops</div>
-            <div style={styles.small}>Alfred J. Kwak</div>
-            <div style={styles.small}>Dr Snuggles</div>
+            <div>APlicacion</div>
+            <div>colmo</div>
+            <div>detalles</div>
+            <div>cuenta</div>
+            <div>Benet Salellenas</div>
+            <div>Hafta</div>
+            <div>ejemplo</div>
+            <div>plataforma</div>
+            <div>ingresos</div>
+            <div>como</div>
+            <div>BBVA_mex</div>
+            <div>panellets</div>
+            <div>hijos</div>
           </TagCloud>
         </div>
       </div>

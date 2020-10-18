@@ -2,6 +2,7 @@ import React, {PureComponent, useEffect, useState} from 'react';
 import {
   BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
 } from 'recharts';
+import {URL_BASE} from "../../api";
 
 
 const data = [
@@ -28,7 +29,6 @@ const data = [
     },
 ];
 
-const URL_BASE = 'https://d811e445999a.ngrok.io'
 const BarChart1 = () => {
 
     const [words, setWords] = useState([])
