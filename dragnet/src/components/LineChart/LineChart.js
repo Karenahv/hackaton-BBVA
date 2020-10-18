@@ -40,7 +40,6 @@ const LineGraph = (props) => {
     const yearok = year && year[0]
 
     useEffect(() => {
-        debugger;
         async function getScoreWeek(diaok, mesok, yearok) {
             const request = await fetch(`${URL_BASE}/tweet/get_week_scores/${yearok}-10-${diaok}`, {
 
@@ -49,7 +48,6 @@ const LineGraph = (props) => {
 
             const json = await request.json();
             setData1(json)
-            debugger;
 
         }
 
@@ -57,7 +55,6 @@ const LineGraph = (props) => {
 
     }, [diaok, mesok, yearok])
     let data2 = []
-    debugger;
     if (Array.isArray(data1)) {
         for (let i = 1; i < data1.length; i++) {
             data2.push( {

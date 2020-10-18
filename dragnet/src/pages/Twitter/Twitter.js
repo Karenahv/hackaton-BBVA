@@ -12,6 +12,7 @@ import Moment from 'react-moment';
 import moment from 'moment';
 import 'moment/locale/es';
 import {Spin} from "antd";
+import BarChart1 from "../../components/BarChart/BarChart";
 
 
 const URL_BASE = 'https://d811e445999a.ngrok.io'
@@ -86,7 +87,7 @@ const Twitter = (props) => {
     return (
         <AppFrame>
             <h1>Fecha de Análisis Twitter : <Moment
-                format="MMM DD YYYY">{moment.utc().subtract(1, 'days').locale('es')}</Moment></h1>
+                format="MMM DD YYYY">{moment.utc().locale('es')}</Moment></h1>
             <Row gutter={{xs: 8, sm: 16, md: 24, lg: 32}}>
                 <Col lg={6} md={24} xs={24}>
                     <CuadroResumen dato={resumen && resumen[0] && resumen[0].n_tweets_analized} title='Tweets analizados' icon={<AiFillWechat/>}></CuadroResumen>
@@ -139,6 +140,9 @@ const Twitter = (props) => {
 
             <Row className='row-tag-cloud'>
                 <TagCloudComp></TagCloudComp>
+            </Row>
+            <Row id='bar-chart'>
+                <BarChart1></BarChart1>
             </Row>
 
         </AppFrame>

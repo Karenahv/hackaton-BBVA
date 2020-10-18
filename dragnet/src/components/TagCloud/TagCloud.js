@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, {Component, useEffect, useState} from "react";
 import randomColor from "randomcolor";
 import TagCloud from "react-tag-cloud";
 import CloudItem from "./CloudItem";
@@ -15,12 +15,46 @@ const styles = {
   }
 };
 
-class TagCloudComp extends Component {
-  componentDidMount() {
+const URL_BASE = 'https://d811e445999a.ngrok.io'
 
-  }
+const TagCloudComp = (props) => {
+    const [words, setWords] = useState([])
+    const dia = useState(new Date().getDate())
+    const mes = useState(new Date().getMonth())
+    const year = useState(new Date().getFullYear())
+    const [bestTweet, setBestTweet] = useState(null)
+    const diaok = dia && dia[0]
+    const mesok = mes && mes[0]
+    const yearok = year && year[0]
+    // console.log(<Moment
+    //                                             format="MMM DD YYYY">{moment.utc(fecha).locale('es')}</Moment>)
 
-  render() {
+    useEffect(() => {
+
+        async function getKeywordsScore(diaok, mesok, yearok) {
+            const request = await fetch(`${URL_BASE}/tweet/get_keyword_scores/${yearok}-10-${diaok}`, {
+
+                method: 'GET'
+            });
+
+            const json = await request.json();
+            setWords(json)
+        }
+
+        getKeywordsScore(diaok, mesok, yearok)
+
+    }, [diaok, mesok, yearok])
+
+     let data2 = []
+    if (Array.isArray(words)) {
+        for (let i = 1; i < words.length; i++) {
+            data2.push( {
+                name: words[i].word,
+            })
+
+        }
+    }
+
     return (
       <div className="app-outer">
         <div className="app-inner">
@@ -94,7 +128,6 @@ class TagCloudComp extends Component {
         </div>
       </div>
     );
-  }
 }
 
 export default TagCloudComp;
